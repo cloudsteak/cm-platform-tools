@@ -18,7 +18,7 @@ on:
 
 jobs:
     release:
-        uses: cloudsteak/cm-workflows/.github/workflows/new-release-monorepo.yml@1.3.0
+        uses: cloudsteak/cm-workflows/.github/workflows/new-service-release.yml@2132cfc7be58eb0e18d1224c27d43cdb44985e6c
         with:
             service: ${{ inputs.service }}
             release_type: ${{ inputs.release_type }}
