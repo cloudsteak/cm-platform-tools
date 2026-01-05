@@ -75,3 +75,5 @@ jobs:
         uses: cloudsteak/cm-workflows/.github/workflows/staging-build-push.yml@1.2.1
         with:
             image_name: ${{ matrix.image_name }}
+            dockerfile_path: services/${{ matrix.image_name }}/Dockerfile
+            build_context: services/${{ matrix.image_name }}
