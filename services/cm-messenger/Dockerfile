@@ -2,7 +2,7 @@ FROM python:3.11-slim
 
 WORKDIR /app
 
-# UV telepítése
+# Install UV
 RUN pip install --no-cache-dir uv
 
 # Dependency definition
