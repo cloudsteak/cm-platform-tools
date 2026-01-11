@@ -113,11 +113,10 @@ Response:
 ### Send Email
 
 ```bash
-curl -X POST http://localhost:8000/v1/emails/send \
+curl -i -X POST http://localhost:8000/v1/emails/send \
   -H "Content-Type: application/json" \
-  -H "X-API-Key: your-internal-api-key" \
   -d '{
-    "template": "lab_ready_default",
+    "template": "lab_ready_default.html",
     "recipient": "user@example.com",
     "subject": "Your lab environment is ready!",
     "username": "testuser",
@@ -128,14 +127,12 @@ curl -X POST http://localhost:8000/v1/emails/send \
 ```
 
 Response:
-```json
-{
-  "status": "sent",
-  "provider": "brevo",
-  "template": "lab_ready_default",
-  "recipient": "user@example.com",
-  "message_id": "abc123..."
-}
+```http
+HTTP/1.1 200 OK
+date: Sun, 11 Jan 2026 09:30:34 GMT
+server: uvicorn
+content-length: 138
+content-type: application/json
 ```
 
 ## Development
